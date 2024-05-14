@@ -1,0 +1,2 @@
+SELECT COUNT(Users.ID) AS Count, AVG(Users.SALARY) AS avg FROM Users
+GROUP BY Users.DEPARTMENT_ID
