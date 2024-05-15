@@ -37,7 +37,6 @@ void merge(std::vector<int>& array, int left, int mid, int right)
         currentPosition++;
     }
 
-    // Copy the remaining elements of L[], if there are any
     while (i < leftSize) 
     {
         array[currentPosition] = L[i];
@@ -45,7 +44,6 @@ void merge(std::vector<int>& array, int left, int mid, int right)
         currentPosition++;
     }
 
-    // Copy the remaining elements of R[], if there are any
     while (j < rightSize) 
     {
         array[currentPosition] = R[j];
@@ -71,7 +69,6 @@ void solveTask(std::vector<int>& array)
     mergeSort(array, begin, end);
 }
 
-// A utility function to print an array
 void printArray(const std::vector<int>& array) 
 {
     for (int i = 0; i < array.size(); i++) 
