@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int binarySearch(std::vector<int>& array, int element)
 {
@@ -24,6 +25,7 @@ int binarySearch(std::vector<int>& array, int element)
 
 int main()
 {
-    std::vector<int> array = {1, 2, 5, 7, 10, 15};
-    std::cout << binarySearch(array, 11) << std::endl;
+    std::vector<int> array = {7, 2, 3, 1, 52, 15};
+    std::sort(array.begin(), array.end());
+    std::cout << binarySearch(array, 3) << std::endl;
 }

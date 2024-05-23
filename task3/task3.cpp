@@ -1,11 +1,11 @@
 #include <iostream>
 #include <vector>
 
-int solveTask(std::vector<int>& array)
+int solveTask(const std::vector<int>& array)
 {
     int max1 = -1, max2 = -1;
     int idx1 = -1, idx2 = -1;
-
+    
     for (int i = 0; i < array.size(); i++)
     {
         if (array[i] > max1)

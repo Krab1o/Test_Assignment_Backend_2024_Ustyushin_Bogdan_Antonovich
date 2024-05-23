@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void merge(std::vector<int>& array, int left, int mid, int right) 
+void merge(std::vector<int>& array, const int& left, const int& mid, const int& right) 
 {
     int leftSize = mid - left + 1;
     int rightSize = right - mid;
@@ -52,7 +52,7 @@ void merge(std::vector<int>& array, int left, int mid, int right)
     }
 }
 
-void mergeSort(std::vector<int>& array, const int begin, const int end)
+void mergeSort(std::vector<int>& array, const int& begin, const int& end)
 {
     if (begin >= end)
         return;
@@ -71,6 +71,11 @@ void solveTask(std::vector<int>& array)
 
 void printArray(const std::vector<int>& array) 
 {
+    if (!array.size())
+    {
+        std::cerr << "No elements in array!";
+        return;
+    }
     for (int i = 0; i < array.size(); i++) 
     {
         std::cout << array[i] << " ";
@@ -80,7 +85,7 @@ void printArray(const std::vector<int>& array)
 
 int main() 
 {
-    std::vector<int> array = {1, -1, 3, 42, 5};
+    std::vector<int> array = {5, -3, 8, 42, 34, 69};
 
     std::cout << "Array before sorting:" << std::endl;
     printArray(array);
